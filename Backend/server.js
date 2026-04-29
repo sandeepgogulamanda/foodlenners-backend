@@ -40,7 +40,7 @@ app.post("/api/login", (req, res) => {
 
   console.log("Incoming:", email, password);
 
-  const query = "SELECT * FROM usersRoles WHERE email = ? AND password = ?";
+  const query = "SELECT * FROM userRoles WHERE email = ? AND password = ?";
 
   db.query(query, [email, password], (err, results) => {
     if (err) {
